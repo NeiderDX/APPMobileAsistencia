@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="degradado">
+    <ion-title>Cambiar Contraseña</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-img src="assets/olvida-img.svg"></ion-img>
+
+
+  <!--INPUT USUARIO-->
+  <ion-item class="input ion-margin-top">
+    <ion-input [(ngModel)]="mdl_usuario" label="Contraseña actual" labelPlacement="floating" placeholder="Ingrese su contraseña actual"></ion-input>
+  </ion-item>
+
+   <!--INPUT CONTRASEÑA ACTUAL-->
+  <ion-item class="input ion-margin-top">
+    <ion-input [(ngModel)]="mdl_contraVieja" label="Contraseña actual" labelPlacement="floating" placeholder="Ingrese su contraseña actual"></ion-input>
+  </ion-item>
+
+   <!--INPUT CONTRASEÑA NUEVA-->
+  <ion-item class="input ion-margin-top">
+    <ion-input [(ngModel)]="mdl_contraNueva" label="Contraseña nueva" labelPlacement="floating" placeholder="Ingrese su contraseña nueva"></ion-input>
+  </ion-item>
+
+  <!--INPUT CONFIRMAR CONTRASEÑA NUEVA-->
+  <ion-item class="input ion-margin-top">
+    <ion-input [(ngModel)]="mdl_confirmacion" label="Confirmar contraseña" labelPlacement="floating" placeholder="Confirme su contraseña nueva"></ion-input>
+  </ion-item>
+
+  <!--ACEPTAR EL CAMBIO DE CONTRASEÑA-->
+  <ion-button (click)="cambiarContrasena()" expand="block" class="degradado boton ion-margin-top">Cambiar Contraseña</ion-button>
+
+  <ion-item *ngIf="v_visible" color="warning" class="ion-margin-top ion-text-center" >
+    <ion-label> <strong> {{ v_mensaje }} </strong> </ion-label>
+  </ion-item>
+
+ 
+  
+</ion-content>

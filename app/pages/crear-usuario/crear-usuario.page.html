@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="degradado">
+    <ion-title>Nuevo usuario</ion-title>
+    <ion-back-button slot="start" defaultHref="/" icon="home"></ion-back-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <ion-img src="assets/registro-img.svg"></ion-img>
+
+  <!--INPUT USUARIO-->
+  <ion-item class="input ion-margin-top">
+    <ion-input [(ngModel)]="mdl_usuario" label="usuario" labelPlacement="floating" placeholder="Ingresa tu usuario"></ion-input>
+  </ion-item>
+
+   <!--INPUT CONTRASEÑA-->
+   <ion-item class="input ion-margin-top">
+    <ion-input [(ngModel)]="mdl_contrasena" label="Contraseña" labelPlacement="floating" placeholder="Ingresa tu contraseña"></ion-input>
+  </ion-item>
+
+   <!--INPUT CORREO-->
+   <ion-item class="input ion-margin-top">
+    <ion-input [(ngModel)]="mdl_correo" label="Correo" labelPlacement="floating" placeholder="Ingresa tu correo"></ion-input>
+  </ion-item>
+
+   <!--INPUT NOMBRE-->
+   <ion-item class="input ion-margin-top">
+    <ion-input [(ngModel)]="mdl_nombre" label="Nombre" labelPlacement="floating" placeholder="Ingresa tu nombre"></ion-input>
+  </ion-item>
+
+   <!--INPUT APELLIDO-->
+   <ion-item class="input ion-margin-top">
+    <ion-input [(ngModel)]="mdl_apellido" label="Apellido" labelPlacement="floating" placeholder="Ingresa tu apellido"></ion-input>
+  </ion-item>
+
+  <!--BOTON ALMACENAR USUARIO-->
+  <ion-button (click)="usuarioAlmacenar()" class="degradado boton ion-margin-top" expand="block"> Registrar </ion-button>
+
+</ion-content>
